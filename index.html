@@ -566,8 +566,10 @@
 			</div>
 		</form> -->
     </div><!-- /.navbar-collapse -->
-</nav>            <div class="info-block">
-                <h5>Главный редактор:</h5>
+</nav>            
+
+        <div class="info-block">
+            <!--    <h5>Главный редактор:</h5>
                 <p>Кандидат филологических наук<br> <a href="http://inion.ru/ru/about/personalities/sokolova-elizaveta-vsevolodovna/" target="_blank">Соколова Елизавета Всеволодовна</a></p>
                 <h5>Издатель:</h5>
               <p><a href="http://inion.ru/about/info/" target="_blank">Федеральное государственное бюджетное учреждение науки Институт научной информации по общественным наукам Российской академии наук</a></p>
@@ -579,11 +581,12 @@
               
               <h5>Индексация:</h5>
               <p><a href="https://www.elibrary.ru/title_about_new.asp?id=2768" target="_blank">eLIBRARY</a>, <a href="https://www.elibrary.ru/title_about_new.asp?id=2768" target="_blank">РИНЦ</a>, <a href="https://www.elibrary.ru/title_about_new.asp?id=2768" target="_blank">CrossRef</a>, Google Scholar. Префикс DOI: 10.31249/lit</p>
-              <p>Издается с 1974</p>
+              <p>Издается с 1974</p>-->
 <!--                 <h5>Тематические рубрики:</h5>
                 <p>02.00.00 Философия<br>13.00.00 Культурология<br>16.00.00 Языкознание</p> -->
-                <p><strong>Периодичность:</strong> 4 номера в год</p>
+                <!--<p><strong>Периодичность:</strong> 4 номера в год</p>-->
         </div>
+		
         </div>
         </div>
         <div class="col-sm-7 main-block">
@@ -635,9 +638,25 @@
 	
 	<script>
 	
-	  $(".info-block")[0].innerHTML = '<object type="text/html" data="info.html" ></object>'
+	  //$(".info-block")[0].innerHTML = '<object type="text/html" data="info.html" ></object>'
 	  
-	  console.log("test")
+	  //$(".info-block")[0].load("about.html")
+	  
+	  //console.log("test")
+	  
+	  info = document.getElementByClassName("info-block")[0];
+	  
+	  req = new XMLHttpRequest();
+	  
+	  req.onreadystatechange = function () {
+	  
+	                             info.innerHTML = this.responseText;
+	  
+	                           }
+							   
+	  req.open("GET", "info.html", true);
+	  
+	  req.send();
 	  
 	</script>
 
