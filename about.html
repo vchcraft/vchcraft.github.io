@@ -559,24 +559,10 @@
 			</div>
 		</form> -->
     </div><!-- /.navbar-collapse -->
-</nav>            <div class="info-block">
-                <h5>Главный редактор:</h5>
-                <p>Кандидат филологических наук<br> <a href="http://inion.ru/ru/about/personalities/sokolova-elizaveta-vsevolodovna/" target="_blank">Соколова Елизавета Всеволодовна</a></p>
-                <h5>Издатель:</h5>
-              <p><a href="http://inion.ru/about/info/" target="_blank">Федеральное государственное бюджетное учреждение науки Институт научной информации по общественным наукам Российской академии наук</a></p>
-              <p><strong>ISSN (Print):</strong> <a href="https://portal.issn.org/resource/ISSN/2219-8784" target="_blank">2219-8784</a></p>
-              <h5>Свидетельство о регистрации СМИ:</h5>
-              <p><a href="https://rkn.gov.ru/mass-communications/reestr/media/?id=860471&amp;page=" target="_blank">ПИ № ФС 77–80871</a></p>
-              <h5>Подписной индекс:</h5>
-              <p>«Роспечать» 57191, «Пресса России» 81098, 87807</p>
-              
-              <h5>Индексация:</h5>
-              <p><a href="https://elibrary.ru/title_about.asp?id=2776" target="_blank">РИНЦ</a>, <a href="https://scholar.google.ru/citations?user=Wskore8AAAAJ&amp;hl=ru" target="_blank">Google Scholar</a></p>
-              <p>Издается с 1974</p>
-<!--                 <h5>Тематические рубрики:</h5>
-                <p>02.00.00 Философия<br>13.00.00 Культурология<br>16.00.00 Языкознание</p> -->
-                <p><strong>Периодичность:</strong> 4 номера в год</p>
-        </div>
+</nav>            
+
+        <div class="info-block"></div>
+		
         </div>
         </div>
         <div class="col-sm-7 main-block">
@@ -711,5 +697,29 @@
     	if ($(document).height() <= $(window).height())
   			$("footer").addClass("navbar-fixed-bottom");
     </script> -->
+	
+	<script>
+	
+	  //$(".info-block")[0].innerHTML = '<object type="text/html" data="info.html" ></object>'
+	  
+	  //$(".info-block")[0].load("about.html")
+	  
+	  //console.log("test")
+	  
+	  info = document.getElementsByClassName("info-block")[0];
+	  
+	  req = new XMLHttpRequest();
+	  
+	  req.onreadystatechange = function () {
+	  
+	                             info.innerHTML = this.responseText;
+	  
+	                           }
+							   
+	  req.open("GET", "info.html", true);
+	  
+	  req.send();
+	  
+	</script>
 
 </body></html>
