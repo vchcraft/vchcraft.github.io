@@ -24,6 +24,7 @@ load_navbar = new XMLHttpRequest();
 load_navbar.onreadystatechange = function () {
 	                             
 								   navbar.innerHTML = this.responseText;
+								   
                                  }
 
 load_navbar.open("GET", "navbar.html", true);
