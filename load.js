@@ -6,6 +6,7 @@
 	  
 info = document.getElementsByClassName("info-block")[0];
 navbar = document.getElementsByClassName("navbar-navnav")[0];
+sitename = document.getElementsByClassName("sitename")[0];
 	  
 load_info = new XMLHttpRequest();
 	  
@@ -30,4 +31,6 @@ load_navbar.onreadystatechange = function () {
 load_navbar.open("GET", "navbar.html", true);
 
 load_navbar.send();
+
+sitename.innerHTML = "<a href="index.html">Социальные и гуманитарные науки. <br> Отечественная и зарубежная литература. <br> Серия 7. Литературоведение </a>"
 
