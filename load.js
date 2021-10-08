@@ -4,11 +4,13 @@
 	  
 //console.log("test")
 	  
-info = document.getElementsByClassName("info-block")[0];
-navbar = document.getElementsByClassName("navbar-navnav")[0];
+//info = document.getElementsByClassName("info-block")[0];
+//navbar = document.getElementsByClassName("navbar-navnav")[0];
+
 sitename = document.getElementsByClassName("sitename")[0];
+menublock = document.getElementsByClassName("menu-block-inner")[0];
 	  
-load_info = new XMLHttpRequest();
+/*load_info = new XMLHttpRequest();
 	  
 load_info.onreadystatechange = function () {
 	  
@@ -30,7 +32,19 @@ load_navbar.onreadystatechange = function () {
 
 load_navbar.open("GET", "navbar.html", true);
 
-load_navbar.send();
+load_navbar.send();*/
+
+load_menublock = new XMLHttpRequest();
+	  
+load_menublock.onreadystatechange = function () {
+	  
+	                                  menublock.innerHTML = this.responseText;
+	  
+	                                }
+							   
+load_menublock.open("GET", "menu-block.html", true);
+	  
+load_menublock.send();
 
 sitename.innerHTML = "<a href="index.html">Социальные и гуманитарные науки. <br> Отечественная и зарубежная литература. <br> Серия 7. Литературоведение </a>"
 
