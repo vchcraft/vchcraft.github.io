@@ -46,5 +46,5 @@ load_menublock.open("GET", "menu-block.html", true);
 	  
 load_menublock.send();
 
-sitename.innerHTML = "<a href="index.html">Социальные и гуманитарные науки. <br> Отечественная и зарубежная литература. <br> Серия 7. Литературоведение </a>"
+sitename.innerHTML = "<a href='index.html'>Социальные и гуманитарные науки. <br> Отечественная и зарубежная литература. <br> Серия 7. Литературоведение </a>"
 
